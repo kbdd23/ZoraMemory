@@ -1,0 +1,5 @@
+{
+  "name": "zora-memory",
+  "version": "1.0.0",
+  "description": "Memoria persistente vectorial para DeepSeek CLI usando ChromaDB"
+}

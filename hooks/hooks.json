@@ -1,0 +1,54 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "name": "iniciar memoria",
+            "type": "command",
+            "command": "${extensionPath}/scripts/session_start.py",
+            "timeout": 30000
+          }
+        ]
+      }
+    ],
+    "BeforeAgent": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "name": "consultar memoria",
+            "type": "command",
+            "command": "${extensionPath}/scripts/before_agent.py",
+            "timeout": 15000
+          }
+        ]
+      }
+    ],
+    "AfterAgent": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "name": "indexar memoria",
+            "type": "command",
+            "command": "${extensionPath}/scripts/after_agent.py",
+            "timeout": 30000
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "name": "podar memoria",
+            "type": "command",
+            "command": "${extensionPath}/scripts/session_end.py",
+            "timeout": 8000
+          }
+        ]
+      }
+    ]
+  }
+}
