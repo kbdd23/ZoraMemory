@@ -17,6 +17,7 @@ la extensión es funcional y permite almacenamiento local de memorias.
 ---
 
 Ahora el agente tiene 3 fuentes de memoria:
+
 1.-Deepseek.md -> Core, tunning, personalidad, aspectos clave.
 
 2.-Contexto de la sesión -> Es lo que entiende mientras hablas con el CLI
